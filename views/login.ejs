@@ -1,0 +1,22 @@
+<%- include("./partials/header") %>
+    <main class="main">
+      <div class="forminp ">
+        <h1>Login !</h1>
+        <form action="/login" method="post">
+          <input type="text" name="username" id="" placeholder="enter your username">
+          <input type="password" name="password" id="" placeholder="*********">
+          <a href="/forgetpassword">
+            <h3 class="already">Forget-password !</h3>
+          </a>
+          <br>
+          <a href="/">
+            <h3 class="already">don't have account ! Register</h3>
+          </a>
+          
+          <input value="Login" type="submit" name="" id="" class="btn">
+
+        </form>
+      </div>
+    </main>
+  
+    <%- include("./partials/footer") %>
