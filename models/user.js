@@ -7,6 +7,10 @@ const userSchema = mongoose.Schema({
   username: String,
   email: String,
   passport: String,
+  profileimage: {
+    type: String,
+    default: "defualt.jpg",
+  },
   products: [{ type: mongoose.Schema.Types.ObjectId, ref: "post" }],
 });
 userSchema.plugin(plm);

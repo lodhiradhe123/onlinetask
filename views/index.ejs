@@ -1,13 +1,16 @@
 <%- include("./partials/header") %>
     <main class="main">
       <div class="forminp ">
+        <a href="/"><i class=" backarrow ri-arrow-left-line"></i></a>
+        <br>
+        <br>
         <h1>Register !</h1>
-        <form action="/register" method="post">
+        <form action="/user/register" method="post">
           <input type="text" name="name" id="" placeholder="enter your name">
           <input type="text" name="username" id="" placeholder="enter your username">
           <input type="email" name="email" id="" placeholder="enter your email">
           <input type="password" name="password" id="" placeholder="*********">
-          <a href="/login">
+          <a href="/user/login">
             <h3 class="already">already Registered ! Login</h3>
           </a>
           <br>

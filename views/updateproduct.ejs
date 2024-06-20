@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+    <main class="main">
+      <div class="forminp ">
+        <h1>Update your product !</h1>
+        <form action="/product/updateproduct/<%=product._id%>" method="post" enctype="multipart/form-data">
+            <img src="/images/<%=product.image%>" alt="" class="updateimage">
+          <input type="file" name="image" id="" >
+          <input type="text" name="name" id="" placeholder="enter product title">
+          <input type="text" name="description" id="" placeholder="description">
+          <input value="submit" type="submit" name="" id="" class="btn">
+
+        </form>
+      </div>
+    </main>
+  
+    <%- include("./partials/footer") %>

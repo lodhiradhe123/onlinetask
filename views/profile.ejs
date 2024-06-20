@@ -1,22 +1,34 @@
 <%- include("./partials/header") %>
+<%- include('./partials/nav') %>
 
+  <form class="form-image" action="/user/editprofileimage/<%=user._id%>" method="post" enctype="multipart/form-data">
+    <input type="file" name="profileimage" id="" class="inputimage" >
+  </form>
+  
 <div class="centerprofile">
+ <a href="/"> <i class=" homearrow ri-home-8-line"></i></a>
   <div class="image">
-   <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vZGVsfGVufDB8fDB8fHww" alt="" class="image">
+    <img
+    src="/images/default.jpg"
+      alt=""
+      class="image"
+    />
+    <a href=""><i class="editimage ri-image-edit-fill"></i></a>
   </div>
+  
   <div class="profile">
-    <h1 >Name:- <%=user.name%></h1>
+    <h1>Name:- <%=user.name%></h1>
     <h1>User_name:- <%=user.username%></h1>
     <h1>email:-<%=user.email%></h1>
     <br />
     <div class="icon">
       <a
-        href="/logout"
+        href="/user/logout"
         class="text-2xl bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg p-4"
         ><i class="ri-logout-circle-line"></i
       ></a>
       <a
-        href="/resetpassword"
+        href="/user/resetpassword"
         class="text-2xl text-center bg-blue-200 hover:bg-yellow-100 p-2 border-2 border-black rounded-lg"
         >Reset <i class="ri-key-2-line"></i
       ></a>
@@ -27,7 +39,36 @@
         >Create <i class="ri-add-box-line"></i
       ></a>
     </div>
+    <br>
+    <br>
+    <div>
+      <a href="/user/delete/<%=user._id%>"><button class="deleteuser">delete user</button></a>
+      
+      <a href="/user/update/<%=user._id%>"><button class="updateuser">update user</button></a>
+    </div>
   </div>
 </div>
+<!-- products -->
+
+<div class="myproducts">
+  <%myproducts.forEach((product)=>{%>
+  <div class="product">
+    <div class="pimage">
+      <img
+        src="/images/<%=product.image%>"
+        alt=""
+      />
+    </div>
+    <h1><%=product.name%></h1>
+    <h4><%=product.description%></h4>
+    <div class="pbtn">
+      <a href="/product/delete/<%=product._id%>">Delete</a>
+      <a href="/product/updateproduct/<%=product._id%>">update</a>
+    </div>
+  </div>
+  <%}) %>
+</div>
+
+
 
 <%- include("./partials/footer") %>
