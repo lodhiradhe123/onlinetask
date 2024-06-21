@@ -1,0 +1,24 @@
+
+<%- include('./partials/header') %>
+<div class="myproducts">
+    <a href="/"><i class="backarrow ri-arrow-left-line"></i></a>
+
+    <%allproducts.forEach((product)=>{%>
+    <div class="product">
+      <div class="pimage">
+        <img
+          src="/images/<%=product.image%>"
+          alt=""
+        />
+      </div>
+      <h1><%=product.name%></h1>
+      <h4><%=product.description%></h4>
+      <div class="allbtn">
+        <a href=""><i class="ri-heart-line"></i></a>
+        <a href="">go for it.</a>
+      </div>
+    </div>
+    <%}) %>
+  </div>
+
+<%- include('./partials/footer') %>

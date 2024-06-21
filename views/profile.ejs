@@ -1,18 +1,15 @@
 <%- include("./partials/header") %>
 <%- include('./partials/nav') %>
 
-  <form class="form-image" action="/user/editprofileimage/<%=user._id%>" method="post" enctype="multipart/form-data">
-    <input type="file" name="profileimage" id="" class="inputimage" >
-  </form>
+ 
   
 <div class="centerprofile">
  <a href="/"> <i class=" homearrow ri-home-8-line"></i></a>
   <div class="image">
-    <img
-    src="/images/default.jpg"
-      alt=""
-      class="image"
-    />
+    
+    <img src="/images/defaultimage.jpg" alt="" class="image">
+    <img src="/images/<%=user.profileimage%>" alt="" class="image">
+   
     <a href=""><i class="editimage ri-image-edit-fill"></i></a>
   </div>
   
@@ -20,7 +17,15 @@
     <h1>Name:- <%=user.name%></h1>
     <h1>User_name:- <%=user.username%></h1>
     <h1>email:-<%=user.email%></h1>
-    <br />
+   
+    <div>
+      <a href="/user/delete/<%=user._id%>"><button class="deleteuser">delete user</button></a>
+      
+      <a href="/user/update/<%=user._id%>"><button class="updateuser">update user</button></a>
+    </div>
+    
+    <br>
+    <br>
     <div class="icon">
       <a
         href="/user/logout"
@@ -38,13 +43,6 @@
         class="text-2xl text-center bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg"
         >Create <i class="ri-add-box-line"></i
       ></a>
-    </div>
-    <br>
-    <br>
-    <div>
-      <a href="/user/delete/<%=user._id%>"><button class="deleteuser">delete user</button></a>
-      
-      <a href="/user/update/<%=user._id%>"><button class="updateuser">update user</button></a>
     </div>
   </div>
 </div>

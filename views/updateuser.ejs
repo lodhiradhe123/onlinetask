@@ -5,7 +5,9 @@
         <br>
         <br>
         <h1>update user details !</h1>
-        <form action="/user/update/<%=id%>" method="post">
+        
+       
+        <form action="/user/update/<%=id%>" method="post" enctype="multipart/form-data">
           <input value="<%=user.name%>" type="text" name="name" id="" placeholder="enter your name">
           <input value="<%=user.username %>" type="text" name="username" id="" placeholder="enter your username">
           <input value="<%=user.email %>" type="email" name="email" id="" placeholder="enter your email">

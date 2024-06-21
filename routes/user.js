@@ -9,6 +9,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 
 const isLoggedIn = require("../utils/auth");
 const uploads = require("../utils/multer");
+const fs = require('fs')
+const path = require("path")
 //
 
 router.get("/register", function (req, res, next) {
@@ -103,20 +105,9 @@ router.get("/update/:id", isLoggedIn, async function (req, res, next) {
 });
 router.post("/update/:id", isLoggedIn, async function (req, res, next) {
   const user = await User.findByIdAndUpdate(req.params.id, req.body);
+
+  await user.save();
   res.redirect("/user/profile");
 });
-router.post("/editprofileimage/:id", isLoggedIn, uploads.single("profileimage"), async function (req, res, next) {
-    // if (req.user.profileimage !== "defaultimage.jpg") {
-    //     fs.unlinkSync(
-    //         path.join(__dirname, "../", "public", "images", req.user.profileimage)
-    //     );
-    // }
-    req.user.profileimage = req.file.filename;
-    await req.user.save();
-    res.redirect("/user/profile");
-    try {
-    } catch (error) {
-        res.send(err);
-    }
-  });
+
 module.exports = router;

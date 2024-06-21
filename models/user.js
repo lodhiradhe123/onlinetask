@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
   passport: String,
   profileimage: {
     type: String,
-    default: "defualt.jpg",
+    default: "defualtimage.jpg",
   },
   products: [{ type: mongoose.Schema.Types.ObjectId, ref: "post" }],
 });

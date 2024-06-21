@@ -7,6 +7,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: sans-serif;
 }
 .main {
   width: 100%;
@@ -88,6 +89,7 @@ a {
 
 /* //landingpage */
 .landingpage {
+  top: 0;
   width: 100%;
   height: 100vh;
   background-image: url("../images/2aec23ff-f013-4a28-b01c-7e6c95538df9.jpeg");
@@ -123,6 +125,8 @@ a {
   cursor: pointer;
 }
 .layout {
+  color: white;
+  font-size: 15px;
   width: 100%;
   height: 100vh;
   background: #00000098;
@@ -132,6 +136,7 @@ a {
   align-items: center;
   position: absolute;
   z-index: 3;
+
 }
 .layout h1 {
 
@@ -159,7 +164,7 @@ a {
 
 .myproducts{
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
@@ -169,17 +174,18 @@ a {
 }
 .product{
   width: 20%;
-  height:60% ;
+  height:70% ;
   margin-top:2% ;
   background-color: rgb(209, 209, 209);
   border-radius: 20px;
   overflow: hidden;
   padding: 4px;
   border: 1px solid grey;
+  position: relative;
 }
 .pimage{
   width: 100%;
-  height: 70%;
+  height: 60%;
   /* background-color: aqua; */
   
 }
@@ -201,6 +207,25 @@ a {
 .pbtn a{
   text-decoration: none;
   color: blue;
+  font-size: larger;
+  font-weight: 700;
+}
+/* allproducts */
+.allbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  bottom: 2%;
+}
+.allbtn a{
+  text-decoration: none;
+  color: green;
+  font-size: larger;
+  font-weight: 700;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 2px 4px;
+  background: pink;
 }
 
 
@@ -267,10 +292,132 @@ nav{
   position: absolute;
   z-index: 11;
   text-align: start;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 500;
   top: 15%;
   left: -25%;
   opacity: 0;
+  line-height: 50px;
 
+}
+.landingpageproject {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/ecom.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+.layoutproject {
+  color: white;
+  width: 100%;
+  height: 235vh;
+  background: #00000098;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+
+}
+/* .layoutproject h1{
+  font-size: 5rem;
+  text-transform: capitalize;
+} */
+/* .landingpageproject{
+  color: rgb(9, 255, 9);
+  font-size: 2rem;
+
+} */
+.leftproject{
+  padding: 3%;
+  width: 50%;
+  /* height: 30%; */
+  background-color: rgba(2, 55, 37, 0.6);
+  border-radius: 20px;
+}
+.leftproject h1 {
+  font-size: 3rem;
+  color: white;
+}
+.leftproject a{
+  font-size: 1.5rem;
+  color: rgb(0, 254, 0);
+}
+.leftproject button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 2rem;
+  background-color: rgb(51, 51, 233);
+  color: white;
+  border: none;
+}
+
+.rightproject{
+  padding: 2%;
+  width: 50%;
+  /* height: 30%; */
+  margin-left: 49.5%;
+  background-color: rgba(2, 55, 37, 0.6);
+  border-radius: 20px;
+}
+.rightproject h1 {
+  font-size: 3rem;
+  color: white;
+}
+.rightproject a{
+  font-size: 1.5rem;
+  color: rgb(0, 254, 0);
+}
+.rightproject button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 2rem;
+  background-color: rgb(51, 51, 233);
+  color: white;
+  border: none;
+}
+
+/* footer */
+
+footer{
+  width: 100%;
+  height: 25%;
+  background: rgba(128, 128, 128, 0.685);
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+.leftfooter{
+  width: 30%;
+  text-align: start;
+  font-size: 2rem;
+  line-height: 50px;
+}
+
+.rightfooter{
+  /* width: 30%; */
+  text-align: start;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+
+/* aboutpage */
+.aboutpageproject {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWJvdXR8ZW58MHx8MHx8fDA%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+.aboutpageproject p{
+  font-size: 25px;
+  text-align: start;
+  line-height: 35px;
 }

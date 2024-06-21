@@ -64,4 +64,10 @@ router.post('/updateproduct/:id',isLoggedIn,uploads.single("image") ,async funct
   }
 })
 
+router.get('/allproducts',async function(req, res){
+   const allproducts = await productSchema.find()
+  //  res.json(allproducts)
+   res.render("allproducts",{user:req.user,allproducts:allproducts})
+});
+
 module.exports = router;
