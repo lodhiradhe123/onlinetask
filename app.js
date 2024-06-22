@@ -1,3 +1,4 @@
+require("dotenv").config({ path: "./.env" });
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -11,8 +12,10 @@ var userRouter = require("./routes/user");
 var db = require("./models/connetc");
 
 var User = require("./models/user");
-var passport = require("passport")
 var session = require("express-session");
+const { config, env } = require("process");
+
+
 
 
 var app = express();
@@ -28,11 +31,7 @@ app.use(
     resave: true,
   }));
 
-  app.use(passport.initialize())
-  app.use(passport.session())
-
-  passport.serializeUser(User.serializeUser());
-  passport.deserializeUser(User.deserializeUser());
+  
 
 app.use(logger("dev"));
 app.use(express.json());

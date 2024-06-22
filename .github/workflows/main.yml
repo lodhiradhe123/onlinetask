@@ -5,7 +5,7 @@ on:
     branches:
      -main
 jobs:
-deploye:
+build-and-deploye:
  runs-on: ubuntu-latest
  step:
   -name: Checkout
@@ -19,4 +19,4 @@ deploye:
      aws-region: us-east-1
      
  -name: Deploy static site to S3 bucket
-  run: aws s3 sync . s3://tws-github-actions-demo --delete
+  run: aws s3 sync . s3://tws-online-task-submission --delete
