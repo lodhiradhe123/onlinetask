@@ -27,11 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: |
-        touch .env
-        echo "${{secrets.PROD_ENV_FILE}}" > .env
     - run: npm run build --if-present
-    - run: pm2 restart app.js
+    - run: pm2 restart ./bin/www
       
       
    
