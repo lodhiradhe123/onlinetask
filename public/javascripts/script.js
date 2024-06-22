@@ -1,8 +1,7 @@
-document.querySelector(".project").addEventListener("mouseenter", function () {
+document.querySelector(" .project").addEventListener("mouseenter", function () {
   gsap.to("nav", {
     left: "6%",
     opacity: 1,
-    duration: 1,
     stagger: true,
   });
 });

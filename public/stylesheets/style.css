@@ -421,3 +421,49 @@ footer{
   text-align: start;
   line-height: 35px;
 }
+
+/* about page css */
+.aboutlayoutproject {
+  color: white;
+  width: 100%;
+  /* height: 235vh; */
+  background: #00000065;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+
+}
+
+
+.aboutfooter{
+  width: 100%;
+  height: 10%;
+  background: rgba(128, 128, 128, 0.685);
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+
+.aboutrightfooter{
+  width: 60%;
+  height: auto;
+  text-align: start;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+
+/* table css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: black;
+}
